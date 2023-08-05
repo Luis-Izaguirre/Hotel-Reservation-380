@@ -1,4 +1,4 @@
-package Resources;
+package HotelModel;
 
 public class Room {
 }

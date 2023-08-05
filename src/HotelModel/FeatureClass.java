@@ -1,4 +1,4 @@
-package Resources;
+package HotelModel;
 import java.util.*;
 public class FeatureClass {
     private static Scanner scan = new Scanner(System.in);

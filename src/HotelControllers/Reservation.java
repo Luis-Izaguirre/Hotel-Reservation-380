@@ -1,6 +1,7 @@
-package Menu;
-import Resources.*;
+package HotelControllers;
+import HotelModel.*;
  import java.util.*;
+
 public class Reservation {
     private static Scanner scan;
     private String arrivalDate;
@@ -8,11 +9,18 @@ public class Reservation {
     private float customizePrice;
     private boolean Rstatus;
 
+    interface Hotel {
+        public void newReservation();
+
+        public void modifyReservation();
+
+        public void destroyReservation();
+    }
     public Reservation(){
         scan = new Scanner(System.in);
     }
 
-    public static void Initialize(){
+    public static void Initialize(String fname){
         System.out.println("Welcome to the Hotel Menu");
 
         while(true){
@@ -47,11 +55,15 @@ public class Reservation {
         }
         return scan.nextInt();
     }
+/*
+    public void process(String fname){
+        try{
+            Scanner inf = Scanner(new File(fname));
 
-    public void newReservation(){}
 
-    public void modifyReservation(){}
-
-    public void destroyReservation(){}
-
+        }catch(Exception e){
+            System.out.println("\nRead Error! " + e);
+        }
+    }
+*/
 }
